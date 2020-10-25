@@ -42,7 +42,7 @@ config FORCE_DYNAMIC_FTRACE
 	 in order to test the non static function tracing in the
 	 generic code, as other architectures still use it. But we
 	 only need to keep it around for x86_64. No need to keep it
-	 for x86_32. For x86_32, force DYNAMIC_FTRACE. 
+	 for x86_32. For x86_32, force DYNAMIC_FTRACE.
 #
 # Arch settings
 #
@@ -1160,14 +1160,14 @@ config X86_THERMAL_VECTOR
 	def_bool y
 	prompt "Machine check thermal vector"
 	depends on X86_MCE_INTEL
-	---help---
+	help
 	  Provide support for capturing thermal events, logging them, and
 	  passing them off to other drivers.
 
 config X86_MCE_THERMAL_VERBOSE
 	bool "Verbose logging for thermal events"
 	depends on X86_THERMAL_VECTOR
-	---help---
+	help
 	  Display messages in the kernel log when thermal events are triggered,
 	  such as overheating and throttling. This mostly only uses extra CPU
 	  for ratelimiting and book keeping, so unless you need these logs, it
